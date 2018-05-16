@@ -5,16 +5,24 @@
   "engines": {
     "node": "10.1.0"
   },
-  "main": "servidor.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "dependencies": {
     "express": "^4.16.3",
     "path": "^0.12.7"
   },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/guepardo190889/portafolio"
-  }
+    "url": "https://github.com/guepardo190889/portafolio.git"
+  },
+  "keywords": ["node", "heroku", "express", "portafolio"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guepardo190889/portafolio/issues"
+  },
+  "homepage": "https://github.com/guepardo190889/portafolio#readme"
 }
