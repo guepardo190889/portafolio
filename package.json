@@ -6,6 +6,9 @@
     "node": "10.1.0"
   },
   "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "path": "^0.12.7"
