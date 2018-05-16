@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dibujando con Canvas</title>
+	</head>
+
+	<body>
+		<h1>Dibujo en Canvas</h1>
+
+		<p>En qué posición quieres dibujar?<br/>
+			(1=superior-izquierda, 2=superior-derecha, 3=inferiror-izquierda, 4=inferior-derecha) <br/>
+			<input type="text" id="it_posicion" />
+		</p>
+
+		<p>Cuantas líneas quieres?<br/>
+			<input type="text" id="it_lineas" />
+		</p>
+
+		<p>
+			<input type="button" value="Dibujar" id="ib_enviar" />
+			<input type="button" value="Limpiar" id="ib_limpiar" />
+		</p>
+
+		<canvas width="500" height="500" id="dibujito"></canvas>
+		<script type="text/javascript" src="dibujo.js"></script>
+	</body>
+</html>
