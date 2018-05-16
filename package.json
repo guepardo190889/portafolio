@@ -1,0 +1,17 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio profesional",
+  "engines": {
+    "node": "10.1.0"
+  },
+  "main": "servidor.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guepardo190889/portafolio"
+  }
+}
