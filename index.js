@@ -2,10 +2,9 @@
 //Instalar expres: http://expressjs.com/es/starter/static-files.html
 //Agregar archivos en carpetas: https://www.npmjs.com/package/express
 
-var express = require("express");
-var path = require("path");
-
-var PUERTO = 8080;
+const express = require("express");
+const path = require("path");
+const PUERTO = process.env.PORT || 5000 //8080;
 
 var aplicacion = express();
 
