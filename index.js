@@ -27,6 +27,8 @@ aplicacion.get("/teclas", teclas);
 aplicacion.get("/villaplatzi", villaplatzi);
 aplicacion.get("/pizarra", pizarra);
 
+aplicacion.get("/facturable", facturable);
+
 //Cargar directorios
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/culebrita/")));
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/cajero/")));
@@ -35,6 +37,10 @@ aplicacion.use(express.static(path.join(__dirname, "src/javascript/fizzbuzz/")))
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/pakiman/")));
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/teclas/")));
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/villaplatzi/")));
+
+aplicacion.use(express.static(path.join(__dirname, "src/pantallas/")));
+aplicacion.use(express.static(path.join(__dirname, "resources/img/")));
+aplicacion.use(express.static(path.join(__dirname, "resources/css/")));
 
 //Reidrección de rutas a páginas html
 function inicio(request, response) {
@@ -96,6 +102,11 @@ function villaplatzi(request, response){
 
 function pizarra(request, response){
   response.sendFile(path.join(__dirname, "src/javascript/teclas/pizarra.html"));
+}
+
+function facturable(request, response) {
+  response.sendFile(path.join(__dirname, "src/pantallas/facturable.html"))
+  //response.sendFile(path.join(__dirname, "src/pantallas/facturableLightbox.html"))
 }
 
 aplicacion.listen(PUERTO, mensajeServidorIniciado);
