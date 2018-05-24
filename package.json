@@ -17,7 +17,12 @@
     "type": "git",
     "url": "https://github.com/guepardo190889/portafolio.git"
   },
-  "keywords": ["node", "heroku", "express", "portafolio"],
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "portafolio"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
