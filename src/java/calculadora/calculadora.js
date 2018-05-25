@@ -11,9 +11,23 @@ function sumar() {
 }
 
 function testJar(){
-var exec = require("child_process").exec;
-var compileit = "java -jar calculadora.jar" + iOpUno.value + " " + iOpDos.value;
-console.log("ejecutar: " + compleit);
-exec(compileit, function(error, stdout, stderr) {
-});
+  var rutaJava = "java";
+  console.log("rutaJava: " + rutaJava);
+  var rutaJar = "resources\\jar\\calculadora.jar";
+  console.log("rutaJar: " + rutaJar);
+
+  var comando = rutaJava + " -jar " + rutaJar + " 1 2";
+
+  console.log("exec exist: " + exec != null);
+
+  child = exec(comando, respuestaCalculadoraJava);
+}
+
+function respuestaCalculadoraJava(error, stdout, stderr) {
+  //El de la respuesta es el stdout
+  console.log('stdout: ' + stdout);
+  console.log('stderr: ' + stderr);
+  if(error !== null){
+    console.log('exec error: ' + error);
+  }
 }

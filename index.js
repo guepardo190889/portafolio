@@ -7,6 +7,8 @@ const path = require("path");
 const exec = require('child_process').exec;
 const PUERTO = process.env.PORT || 5000 //8080;
 
+module.exports.exec = "exec";
+
 var aplicacion = express();
 
 //Definir rutas
@@ -113,26 +115,39 @@ function pizarra(request, response){
 
 //Navegación Java
 function calculadora(request, response){
-  var rutaJava = "\"C:\\Program Files\\Java\\jdk-10.0.1\\bin\\java\"";
+  response.sendFile(path.join(__dirname, "src/java/calculadora/calculadora.html"));
+
+  /*var rutaJava = "java";
   console.log("rutaJava: " + rutaJava);
-  var rutaJar = "\"D:\\Development\\portafolio\\resources\\jar\\calculadora.jar\"";
+  var rutaJar = "resources\\jar\\calculadora.jar";
   console.log("rutaJar: " + rutaJar);
 
   var comando = rutaJava + " -jar " + rutaJar + " 1 1";
 
-  child = exec(comando, respuestaCalculadoraJava);
-
-  response.sendFile(path.join(__dirname, "src/java/calculadora/calculadora.html"));
+  child = exec(comando, respuestaCalculadoraJava);*/
 }
 
-function respuestaCalculadoraJava(error, stdout, stderr) {
+/*function respuestaCalculadoraJava(error, stdout, stderr) {
   //El de la respuesta es el stdout
   console.log('stdout: ' + stdout);
   console.log('stderr: ' + stderr);
   if(error !== null){
     console.log('exec error: ' + error);
   }
-}
+}*/
+
+/*export function sumar(op1, op2){
+  console.log("sumando: " + op1 + "+" + op2);
+  var rutaJava = "java";
+  console.log("rutaJava: " + rutaJava);
+  var rutaJar = "resources\\jar\\calculadora.jar";
+  console.log("rutaJar: " + rutaJar);
+
+  var comando = rutaJava + " -jar " + rutaJar + " 1 1";
+
+  child = exec(comando, respuestaCalculadoraJava);
+  console.log("child: " + child);
+}*/
 
 function facturable(request, response) {
   response.sendFile(path.join(__dirname, "src/pantallas/facturable.html"))
