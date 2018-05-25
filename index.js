@@ -28,6 +28,7 @@ aplicacion.get("/villaplatzi", villaplatzi);
 aplicacion.get("/pizarra", pizarra);
 
 aplicacion.get("/facturable", facturable);
+aplicacion.get("/sia", sia);
 
 //Cargar directorios
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/culebrita/")));
@@ -106,6 +107,11 @@ function pizarra(request, response){
 
 function facturable(request, response) {
   response.sendFile(path.join(__dirname, "src/pantallas/facturable.html"))
+  //response.sendFile(path.join(__dirname, "src/pantallas/facturableLightbox.html"))
+}
+
+function sia(request, response) {
+  response.sendFile(path.join(__dirname, "src/pantallas/sia.html"))
   //response.sendFile(path.join(__dirname, "src/pantallas/facturableLightbox.html"))
 }
 

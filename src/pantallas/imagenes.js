@@ -48,3 +48,31 @@ var IMAGENES_FACTURABLE = [
 "procesos_externos.PNG",
 "seleccion_empresa.PNG",
 "seleccion_sucursal.PNG"];
+
+var IMAGENES_SIA = [
+  "Ayuda SIA.PNG",
+  "loginSia.jpg",
+  "moduloSGL.jpg",
+  "portalSIA.jpg",
+  "SGL_AdministrarOficina.jpg",
+  "SGL_AdministrarStaff.jpg",
+  "SGL_AdministrarVehiculo.jpg",
+  "SGL_AdministrarViajes.jpg",
+  "SGL_Características.jpg",
+  "SGL_Catalogo_Vehiculos.jpg",
+  "SGL_Checklist.jpg",
+  "SGL_ChecklistVehiculo.jpg",
+  "SGL_DetalleSV.jpg",
+  "SGL_Estancia_CambiarHuespedSTaff1.jpg",
+  "SGL_Estancia_Integrantes.jpg",
+  "SGL_Estancia_RegistroHuespedes.jpg",
+  "SGL_Estancia_RegistroHuespedesStaff.jpg",
+  "SGL_Gastls.jpg",
+  "SGL_GastosViaje.jpg",
+  "SGL_RegistroHotel.jpg",
+  "SGL_RegistroOficina.jpg",
+  "SGL_ServiciosHuespedHotel.jpg",
+  "SGL_SV_Empleado.jpg",
+  "Validaciones.PNG",
+  "Pivotal.jpg"
+];
