@@ -27,6 +27,8 @@ aplicacion.get("/teclas", teclas);
 aplicacion.get("/villaplatzi", villaplatzi);
 aplicacion.get("/pizarra", pizarra);
 
+aplicacion.get("/calculadora", calculadora);
+
 aplicacion.get("/facturable", facturable);
 aplicacion.get("/sia", sia);
 
@@ -39,9 +41,12 @@ aplicacion.use(express.static(path.join(__dirname, "src/javascript/pakiman/")));
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/teclas/")));
 aplicacion.use(express.static(path.join(__dirname, "src/javascript/villaplatzi/")));
 
+aplicacion.use(express.static(path.join(__dirname, "src/java/calculadora/")));
+
 aplicacion.use(express.static(path.join(__dirname, "src/pantallas/")));
 aplicacion.use(express.static(path.join(__dirname, "resources/img/")));
 aplicacion.use(express.static(path.join(__dirname, "resources/css/")));
+aplicacion.use(express.static(path.join(__dirname, "resources/jar/")));
 
 //Reidrección de rutas a páginas html
 function inicio(request, response) {
@@ -103,6 +108,28 @@ function villaplatzi(request, response){
 
 function pizarra(request, response){
   response.sendFile(path.join(__dirname, "src/javascript/teclas/pizarra.html"));
+}
+
+//Navegación Java
+function calculadora(request, response){
+  var exec = require('child_process').exec, child;
+  var rutaJava = "\"C:\\Program Files\\Java\\jdk-10.0.1\\bin\\java\"";
+  console.log("rutaJava: " + rutaJava);
+  var rutaJar = "\"D:\\Development\\portafolio\\resources\\jar\\calculadora.jar\"";
+  console.log("rutaJar: " + rutaJar);
+  child = exec(rutaJava + " -jar " + rutaJar + " 1 1",
+
+  //console.log("ejecutando: " + child);
+    function (error, stdout, stderr){
+      //El de la respuesta es el stdout
+      console.log('stdout: ' + stdout);
+      console.log('stderr: ' + stderr);
+      if(error !== null){
+        console.log('exec error: ' + error);
+      }
+  });
+
+  response.sendFile(path.join(__dirname, "src/java/calculadora/calculadora.html"));
 }
 
 function facturable(request, response) {
