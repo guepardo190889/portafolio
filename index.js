@@ -112,7 +112,6 @@ function facturable(request, response) {
 
 function sia(request, response) {
   response.sendFile(path.join(__dirname, "src/pantallas/sia.html"))
-  //response.sendFile(path.join(__dirname, "src/pantallas/facturableLightbox.html"))
 }
 
 aplicacion.listen(PUERTO, mensajeServidorIniciado);

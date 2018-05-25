@@ -49,6 +49,7 @@ var IMAGENES_FACTURABLE = [
 "seleccion_empresa.PNG",
 "seleccion_sucursal.PNG"];
 
+var MAX_IMAGENES_SIA = 25;
 var IMAGENES_SIA = [
   "Ayuda SIA.PNG",
   "loginSia.jpg",

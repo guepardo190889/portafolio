@@ -12,7 +12,7 @@ function imagenSiguiente() {
 
   var foto = document.getElementById("foto");
 
-  console.log("mostrarImagen: " + MAX_IMAGENES_SIA[index]);
+  console.log("mostrarImagen: " + IMAGENES_SIA[index]);
 
-  foto.src = MAX_IMAGENES_SIA[index];
+  foto.src = IMAGENES_SIA[index];
 }
